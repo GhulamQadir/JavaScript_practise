@@ -59,14 +59,37 @@ console.log(`My percentage is ${perRound}`);
 
 
 //if statements nested
-var num1 = 2;
-var num2 = 3;
-var num3 = 4;
-var num4 = 5;
+// var num1 = 2;
+// var num2 = 3;
+// var num3 = 4;
+// var num4 = 5;
 
-if (num1 + num2 == num4 || num1 + num4 == num4 && num2 + num3 == num1 + num4) {
-    console.log(++num1 + num2++ - num3 + num4)
+// if (num1 + num2 == num4 || num1 + num4 == num4 && num2 + num3 == num1 + num4) {
+//     console.log(++num1 + num2++ - num3 + num4)
+// }
+// else {
+//     console.log("Required output is not obtained")
+// }
+
+
+//to check whether the given number is odd or even
+// var num = window.prompt("Enter any integer(12)");
+// if (num % 2 === 0) {
+//     console.log("even number")
+// }
+// else if (num % 2 === 1) {
+//     console.log("odd number")
+// }
+
+
+//palindrome number
+var checkPalin = window.prompt("enter number to check is it is palindrome or not");
+var convert = checkPalin.split("").reverse().join("");
+
+if (convert === checkPalin) {
+    console.log("Given number is palindrome")
 }
 else {
-    console.log("Required output is not obtained")
+    console.log("this is not a palindrome number")
 }
+console.log(convert);
