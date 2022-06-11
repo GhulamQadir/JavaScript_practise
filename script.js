@@ -106,29 +106,45 @@ console.log(`My percentage is ${perRound}`);
 // console.log(largest);
 
 
-var myArr = [1, 2, 3, 4, 8, 19, 2, 3, 4, 5, 65];
+// var myArr = [1, 2, 3, 4, 8, 19, 2, 3, 4, 5, 65];
 
-var largest = myArr[0];
-for (i = 0; i < myArr.length; i++) {
-    if (largest < myArr[i]) {
-        largest = myArr[i]
-    }
-}
-console.log(largest)
+// var largest = myArr[0];
+// for (i = 0; i < myArr.length; i++) {
+//     if (largest < myArr[i]) {
+//         largest = myArr[i]
+//     }
+// }
+// console.log(largest)
 
-var secondLarg = myArr[0];
-for (i = 0; i < myArr.length; i++) {
-    if (secondLarg < myArr[i] && largest > myArr[i]) {
-        secondLarg = myArr[i]
+// var secondLarg = myArr[0];
+// for (i = 0; i < myArr.length; i++) {
+//     if (secondLarg < myArr[i] && largest > myArr[i]) {
+//         secondLarg = myArr[i]
+//     }
+// }
+// console.log(secondLarg)
+
+// var thirdLarg = myArr[0];
+
+// for (i = 0; i < myArr.length; i++) {
+//     if (thirdLarg < myArr[i] && secondLarg > myArr[i]) {
+//         thirdLarg = myArr[i]
+//     }
+// }
+// console.log(thirdLarg)
+
+
+
+//short method to find the largest second largest number in array
+var newArray = [19, 28, 2, 10, 32, 12,];
+
+var largest = newArray[0];
+var secondLarg = newArray[0];
+
+for (i = 0; i < newArray.length; i++) {
+    if (newArray[i] > largest) {
+        secondLarg = largest
+        largest = newArray[i]
     }
 }
 console.log(secondLarg)
-
-var thirdLarg = myArr[0];
-
-for (i = 0; i < myArr.length; i++) {
-    if (thirdLarg < myArr[i] && secondLarg > myArr[i]) {
-        thirdLarg = myArr[i]
-    }
-}
-console.log(thirdLarg)
