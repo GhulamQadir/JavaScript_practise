@@ -83,13 +83,52 @@ console.log(`My percentage is ${perRound}`);
 
 
 //palindrome number
-var checkPalin = window.prompt("enter number to check is it is palindrome or not");
-var convert = checkPalin.split("").reverse().join("");
+// var checkPalin = window.prompt("enter number to check is it is palindrome or not");
+// var convert = checkPalin.split("").reverse().join("");
 
-if (convert === checkPalin) {
-    console.log("Given number is palindrome")
+// if (convert === checkPalin) {
+//     console.log("Given number is palindrome")
+// }
+// else {
+//     console.log("this is not a palindrome number")
+// }
+// console.log(convert);
+
+
+// to find the 2nd max val in an array
+// var myArr = [2, 6, 4, 8, 12, 7];
+// var largest = myArr[0];
+// for (var i in myArr) {
+//     if (i > largest) {
+//         largest = i;
+//     }
+// }
+// console.log(largest);
+
+
+var myArr = [1, 2, 3, 4, 8, 19, 2, 3, 4, 5, 65];
+
+var largest = myArr[0];
+for (i = 0; i < myArr.length; i++) {
+    if (largest < myArr[i]) {
+        largest = myArr[i]
+    }
 }
-else {
-    console.log("this is not a palindrome number")
+console.log(largest)
+
+var secondLarg = myArr[0];
+for (i = 0; i < myArr.length; i++) {
+    if (secondLarg < myArr[i] && largest > myArr[i]) {
+        secondLarg = myArr[i]
+    }
 }
-console.log(convert);
+console.log(secondLarg)
+
+var thirdLarg = myArr[0];
+
+for (i = 0; i < myArr.length; i++) {
+    if (thirdLarg < myArr[i] && secondLarg > myArr[i]) {
+        thirdLarg = myArr[i]
+    }
+}
+console.log(thirdLarg)
