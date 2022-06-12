@@ -95,16 +95,6 @@ console.log(`My percentage is ${perRound}`);
 // console.log(convert);
 
 
-// to find the 2nd max val in an array
-// var myArr = [2, 6, 4, 8, 12, 7];
-// var largest = myArr[0];
-// for (var i in myArr) {
-//     if (i > largest) {
-//         largest = i;
-//     }
-// }
-// console.log(largest);
-
 
 // var myArr = [1, 2, 3, 4, 8, 19, 2, 3, 4, 5, 65];
 
