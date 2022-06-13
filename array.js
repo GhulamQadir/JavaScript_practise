@@ -46,13 +46,13 @@ var progLang = ["C#", "Python", true, "JavaScript", "Dart", 38];
 
 
 // Q-8
-// var studScores = [320, 230, 480];
-// var studNames = ["Michael", "John", "Tony"];
-// var percentage;
-// for (var i = 0; i < studScores.length; i++) {
-//     percentage = studScores[i] / 500 * 100;
-//     document.write(`Score of ${studNames[i]} is ${studScores[i]}. Percentage: ${percentage}% <br>`)
-// }
+var studScores = [320, 230, 480];
+var studNames = ["Michael", "John", "Tony"];
+var percentage;
+for (var i = 0; i < studScores.length; i++) {
+    percentage = studScores[i] / 500 * 100;
+    document.write(`Score of ${studNames[i]} is ${studScores[i]}. Percentage: ${percentage}% <br>`)
+}
 
 
 // Q-9
