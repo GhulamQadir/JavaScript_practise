@@ -7,13 +7,13 @@
 
 
 // to find the factorial of any number
-var num = window.prompt("Enter factorial number");
-var convertNum = parseInt(num)
-var factorial = 1;
-for (var i = num; i >= 1; i--) {
-    factorial *= i;
-}
-console.log(factorial);
+// var num = window.prompt("Enter factorial number");
+// var convertNum = parseInt(num)
+// var factorial = 1;
+// for (var i = num; i >= 1; i--) {
+//     factorial *= i;
+// }
+// console.log(factorial);
 
 
 // for loops boolean
@@ -35,3 +35,13 @@ console.log(factorial);
 // }
 
 
+// nested loop(printing pyramid)
+var n = 10;
+var star = "";
+for (var i = 1; i <= n; i++) { // mentioning column
+    for (var j = 0; j < i; j++) { // mentioning row
+        star += "*";
+    }
+    star += "\n";
+}
+console.log(star);
