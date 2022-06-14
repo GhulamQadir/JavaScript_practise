@@ -113,20 +113,20 @@
 
 
 // 7. You have an array A = [“cake”, “apple pie”, “cookie”, “chips”, “patties”] Write a program to enable “search by user input” in an array. After searching, prompt the user whether the given item is found in the list or not
-// var bakeryItems = ["cake", "apple pie", "cookie", "chips", "patties"];
-// var searchItem = window.prompt("Welcome to GQs bakery?  What do you want to order?").toLowerCase();
-// var itemMatch = false;
-// for (var i in bakeryItems) {
-//     if (searchItem == bakeryItems[i]) {
-//         itemMatch = true;
-//         document.write(`${searchItem} is available at index ${i} in our bakery`)
-//         break;
+var bakeryItems = ["cake", "apple pie", "cookie", "chips", "patties"];
+var searchItem = window.prompt("Welcome to GQs bakery?  What do you want to order?").toLowerCase();
+var itemMatch = false;
+for (var i in bakeryItems) {
+    if (searchItem == bakeryItems[i]) {
+        itemMatch = true;
+        document.write(`${searchItem} is available at index ${i} in our bakery`)
+        break;
 
-//     }
-// }
-// if (itemMatch === false) {
-//     document.write(`We are sorry. ${searchItem} is not availablein our bakery`)
-// }
+    }
+}
+if (itemMatch === false) {
+    document.write(`We are sorry. ${searchItem} is not availablein our bakery`)
+}
 
 
 
