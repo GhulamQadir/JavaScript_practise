@@ -126,15 +126,73 @@ console.log(`My percentage is ${perRound}`);
 
 
 //short method to find the largest second largest number in array
-var newArray = [19, 28, 2, 10, 32, 12,];
+// var newArray = [19, 28, 2, 10, 32, 12,];
 
-var largest = newArray[0];
-var secondLarg = newArray[0];
+// var largest = newArray[0];
+// var secondLarg = newArray[0];
 
-for (i = 0; i < newArray.length; i++) {
-    if (newArray[i] > largest) {
-        secondLarg = largest
-        largest = newArray[i]
+// for (i = 0; i < newArray.length; i++) {
+//     if (newArray[i] > largest) {
+//         secondLarg = largest
+//         largest = newArray[i]
+//     }
+// }
+// console.log(secondLarg)
+
+
+// chap 21
+// var cities = ["karachi", "lahore", "peshawar", "islamabad"];
+// var checkCity = window.prompt("Enter your city name")
+// checkCity = checkCity.toLowerCase();
+// var cityMatch = false;
+// for (var i = 0; i < cities.length; i++) {
+//     if (checkCity === cities[i]) {
+//         cityMatch = true;
+//         alert("your city is available in this list")
+//     }
+// }
+// if (cityMatch === false) {
+//     alert("your city is not available in this list")
+// }
+
+
+
+// chap 22
+// var cities = ["Karachi", "Lahore", "Peshawar", "Islamabad"];
+// var checkCity = window.prompt("Enter your city name")
+// var firstChar = checkCity.slice(0, 1)
+// firstChar = firstChar.toUpperCase();
+// var otherChars = checkCity.slice(1)
+// otherChars = otherChars.toLowerCase();
+// var concatCity = firstChar + otherChars;
+// var cityMatch = false;
+
+// for (var i = 0; i < cities.length; i++) {
+//     if (concatCity === cities[i]) {
+//         cityMatch = true;
+//         alert("your city is available in this list")
+//     }
+// }
+// if (cityMatch === false) {
+//     alert("your city is not available in this list")
+// }
+
+
+// var day = window.prompt("Enter a day");
+// var charsInDay = day.length;
+// var abbr;
+// if (charsInDay > 3) {
+//     abbr = day.slice(0, 3)
+//     alert(abbr)
+// }
+
+
+
+//check for double spaces
+var string = window.prompt("Enter some text");
+for (var i = 0; i < string.length; i++) {
+    if (string.slice(i, i + 2) === "  ") {
+        alert("Double spaces found!")
+        break;
     }
 }
-console.log(secondLarg)
