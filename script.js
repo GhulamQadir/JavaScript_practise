@@ -1,6 +1,6 @@
 
-var a = "ghoom phr k JS par he aagay na";
-alert(a);
+// var a = "ghoom phr k JS par he aagay na";
+// alert(a);
 
 var myName = "Ghulam Qadir";
 myName = "Ghulam Qadir Sakaria";
@@ -189,10 +189,35 @@ console.log(`My percentage is ${perRound}`);
 
 
 //check for double spaces
-var string = window.prompt("Enter some text");
-for (var i = 0; i < string.length; i++) {
-    if (string.slice(i, i + 2) === "  ") {
-        alert("Double spaces found!")
-        break;
-    }
-}
+// var string = window.prompt("Enter some text");
+// for (var i = 0; i < string.length; i++) {
+//     if (string.slice(i, i + 2) === "  ") {
+//         alert("Double spaces found!")
+//         break;
+//     }
+// }
+
+
+
+// chap 23
+// var text = 'The New Yorker magazine doesnt allow the phrase World War II. They say it should be ....'
+// var indexNum = text.indexOf("World War II")
+// var firstText = text.slice(0, indexNum)
+// var replacingText = "The Second World War"
+// var lastText = text.slice(indexNum + 12)
+// console.log(firstText + replacingText + lastText)
+
+
+
+// chap 24 Finding a character at a location
+// var a = "Ghulam Qadir"
+// console.log(a.charAt(10))
+
+
+// chap 25 Replacing Characters
+var para = "This is example, this is example 2";
+var replace = para.replace(/example/g, "text")
+console.log(replace)
+
+
+// chap 26 Rounding Numbers
