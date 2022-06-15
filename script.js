@@ -215,9 +215,49 @@ console.log(`My percentage is ${perRound}`);
 
 
 // chap 25 Replacing Characters
-var para = "This is example, this is example 2";
-var replace = para.replace(/example/g, "text")
-console.log(replace)
+// var para = "This is example, this is example 2";
+// var replace = para.replace(/example/g, "text")
+// console.log(replace)
 
 
 // chap 26 Rounding Numbers
+// var num = 34.1
+// var round = Math.round(num)  //nearest value
+// console.log(round)
+
+
+// var num = 4.1
+// var ceil = Math.ceil(num)  //higher value
+// console.log(ceil)
+
+
+// var num = 3.9
+// var floor = Math.floor(num)  //lower value
+// console.log(floor)
+
+
+
+// chap 27 Generating Random Numbers
+// var randomNum = Math.random();
+// console.log(randomNum)
+
+
+// toss game 
+// var headsUser = window.prompt("Enter heads user username")
+// var tailsUser = window.prompt("Enter heads tails username")
+// var random = Math.random() * 2
+// var floor = Math.floor(random)
+// console.log(floor)
+// if (floor === 1) {
+//     alert(`Heads: ${headsUser} wins `)
+// }
+// else {
+//     alert(`Tails: ${tailsUser} wins `)
+// }
+
+
+
+// chap 30 Controlling the length of decimals
+var num = Math.random() * 5;
+var controlLength = num.toFixed(2) // decimal place control
+console.log(controlLength)
