@@ -200,7 +200,7 @@ console.log(`My percentage is ${perRound}`);
 
 
 // chap 23
-// var text = 'The New Yorker magazine doesnt allow the phrase World War II. They say it should be ....'
+// var text = 'The New Yorker magazine doesnt allow the phrase World War II. They say it should be....'
 // var indexNum = text.indexOf("World War II")
 // var firstText = text.slice(0, indexNum)
 // var replacingText = "The Second World War"
@@ -242,7 +242,7 @@ console.log(`My percentage is ${perRound}`);
 // console.log(randomNum)
 
 
-// toss game 
+// toss game
 // var headsUser = window.prompt("Enter heads user username")
 // var tailsUser = window.prompt("Enter heads tails username")
 // var random = Math.random() * 2
@@ -258,6 +258,6 @@ console.log(`My percentage is ${perRound}`);
 
 
 // chap 30 Controlling the length of decimals
-var num = Math.random() * 5;
-var controlLength = num.toFixed(2) // decimal place control
-console.log(controlLength)
+// var num = Math.random() * 5;
+// var controlLength = num.toFixed(2) // decimal place control
+// console.log(controlLength)
