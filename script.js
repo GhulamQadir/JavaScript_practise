@@ -261,3 +261,62 @@ console.log(`My percentage is ${perRound}`);
 // var num = Math.random() * 5;
 // var controlLength = num.toFixed(2) // decimal place control
 // console.log(controlLength)
+
+
+
+
+//chap 31 Getting the current date and time
+// var date = new Date();
+// console.log(date)
+
+
+
+// var monthNames = ["Jan", "Feb", "March", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+// var currentDate = new Date();
+// var month = currentDate.getMonth();
+// var currentMonth = monthNames[month];
+// console.log(currentMonth)
+
+
+
+
+// Extracting parts of the date and time
+// var date = new Date();
+// console.log(date.getDay())           // day of week
+// console.log(date.getMonth())        // month
+// console.log(date.getDate())        // day of month
+// console.log(date.getFullYear())   //  year
+// console.log(date.getHours())     //  hour
+// console.log(date.getMinutes()) //  minute
+// console.log(date.getSeconds()) //  second
+// console.log(date.getMilliseconds()) //  millisecond
+// console.log(date.getTime()) //  Milliseconds since midnight, January 1, 1970
+
+
+
+
+
+// chap 23 Specifying a date and time
+//   AGE CALCULATOR
+var usersDob = new Date(prompt("Enter your date of birth\nLike this(Feb 21, 2005)"))
+var dobMilli = usersDob.getTime()
+var today = new Date();
+var todayMilli = today.getTime();
+var diffMilli = todayMilli - dobMilli
+var diffYear = diffMilli / (1000 * 60 * 60 * 24 * 30 * 12)
+var accuAge = Math.floor(diffYear)
+document.write(`Your are ${accuAge} years old`)
+
+
+
+
+// Chap 34 Changing elements of a date and time
+// var date = new Date();
+// date.setFullYear(2000)
+// date.setMonth(1)
+// date.setDate(21)
+// date.setHours(11)
+// date.setMinutes(51)
+// date.setSeconds(22)
+// date.setMilliseconds(4)
+// console.log(date)
