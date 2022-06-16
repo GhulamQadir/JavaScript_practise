@@ -71,9 +71,60 @@
 
 
 // Q:9. Create a date object of the starting date of this Ramadan and alert the number of days past since 1st Ramadan?
-var ramzanDate = new Date("Apr 3, 2022").getTime()
-var currentDate = new Date().getTime();
-var getMilli = currentDate - ramzanDate;
-var getDays = getMilli / (1000 * 60 * 60 * 24)
-var roundOffDays = Math.round(getDays)
-document.write(`${roundOffDays} days have passed since 1st Ramadan,2022`)
+// var ramzanDate = new Date("Apr 3, 2022").getTime()
+// var currentDate = new Date().getTime();
+// var getMilli = currentDate - ramzanDate;
+// var getDays = getMilli / (1000 * 60 * 60 * 24)
+// var roundOffDays = Math.round(getDays)
+// document.write(`${roundOffDays} days have passed since 1st Ramadan,2022`)
+
+
+// Q:10. Write a program that displays in your browser the seconds that elapsed between the reference date and the beginning of 2015.
+// var currentDate = new Date();
+// document.write(`On reference date ${currentDate},<br>`)
+// var beginningDate = new Date("Jan 01, 2022")
+// var diffMilli = currentDate.getTime() - beginningDate.getTime();
+// var getSeconds = diffMilli / (1000 * 60);
+// var roundOffVal = Math.round(getSeconds)
+// document.write(`${roundOffVal} seconds had passed since beginning of 2022`)
+
+
+
+// Q:11. Create a Date object for the current date and time. Extract the hours, reset the date object an hour ahead and finally display the date object in your browser.
+// var currentDate = new Date();
+// document.write(currentDate);
+// currentDate.setHours(currentDate.getHours() - 1);
+// document.write(`<br>1 hour ago, it was ${currentDate}`)
+
+
+
+// Q:12. Write a program that creates a date object and show the date in an alert box that is reset to 100 years back?
+// var currentDate = new Date();
+// document.write(currentDate);
+// currentDate.setFullYear(currentDate.getFullYear() - 100);
+// document.write(`<br>100 years back, it was ${currentDate}`)
+
+
+// Q:13. Write a program to ask the user about his age. Calculate and show his birth year in your browser.
+// var age = Number(prompt("Enter your age"));
+// document.write(`Your age is ${age}<br>`)
+// var currentDate = new Date();
+// currentDate.setFullYear(currentDate.getFullYear() - age)
+// document.write(`Your birth year is ${currentDate.getFullYear()}`)
+
+
+
+// Q:14. Write a program to generate your K-Electric bill in your browser. All the amounts should be rounded off to 2 decimal places. Display the following fields:
+var customerName = "Ghulam Qadir";
+var currentMonth = new Date().toLocaleDateString('en-us', { month: "long" });
+var numOfUnits = 410;
+var chargePerUnit = 16;
+var latePayment = 350;
+var netAmount = numOfUnits * chargePerUnit;
+var grossAmount = netAmount + latePayment;
+
+document.write(`Customer Name: <b>${customerName}</b><br> Month: <b>${currentMonth}</b><br>
+Number of units: <b>${numOfUnits}</b><br>Charges per unit: <b>${chargePerUnit}</b><br><br>`)
+
+document.write(`Net Amount Payable (within Due Date): <b>${netAmount}</b><br>
+Late Payment Surcharge: <b>${latePayment}</b><br> Gross Amount Payable (after Due Date): <b>${grossAmount}</b>`)
