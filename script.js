@@ -298,15 +298,14 @@ console.log(`My percentage is ${perRound}`);
 
 // chap 23 Specifying a date and time
 //   AGE CALCULATOR
-var usersDob = new Date(prompt("Enter your date of birth\nLike this(Feb 21, 2005)"))
-var dobMilli = usersDob.getTime()
-var today = new Date();
-var todayMilli = today.getTime();
-var diffMilli = todayMilli - dobMilli
-var diffYear = diffMilli / (1000 * 60 * 60 * 24 * 30 * 12)
-var accuAge = Math.floor(diffYear)
-document.write(`Your are ${accuAge} years old`)
-
+// var usersDob = new Date(prompt("Enter your date of birth\nLike this(Feb 21, 2005)"))
+// var dobMilli = usersDob.getTime()
+// var today = new Date();
+// var todayMilli = today.getTime();
+// var diffMilli = todayMilli - dobMilli
+// var diffYear = diffMilli / (1000 * 60 * 60 * 24 * 30 * 12)
+// var accuAge = Math.floor(diffYear)
+// document.write(`Your are ${accuAge} years old`)
 
 
 
@@ -320,3 +319,62 @@ document.write(`Your are ${accuAge} years old`)
 // date.setSeconds(22)
 // date.setMilliseconds(4)
 // console.log(date)
+
+
+
+
+// Chap 35 Functions
+// function time() {
+//     var date = new Date();
+//     var hour = date.getHours();
+//     var minutes = date.getMinutes();
+//     document.write(`Time: ${hour}:${minutes}`)
+// }
+// time();
+
+
+
+// Chap 36 Functions: Passing them data
+// function multiply(a, b) {
+//     console.log(a * b)
+// }
+// multiply(7, 5)
+
+
+
+
+// chap 37 Functions: Passing data back from them
+// var order = 2000;  //global variable (used anywhere)
+// function calcTotal() {
+//     var shipping = 5  //local variable (used within function)
+//     var total = order + shipping;
+//     return console.log(`Total of your order is: ${total}`)
+// }
+// calcTotal()
+
+
+
+// CALCULATOR
+function calc(num1, operator, num2) {
+    if (operator == "+") {
+        return num1 + num2
+    }
+    else if (operator == "-") {
+        return num1 - num2
+    }
+    else if (operator == "*") {
+        return num1 * num2
+    }
+    else if (operator == "/") {
+        return num1 / num2
+    }
+    else {
+        return "Incorrect Operator!"
+    }
+}
+
+var num1 = Number(prompt("Enter number 1"))
+var operator = prompt("Enter operator")
+var num2 = Number(prompt("Enter number 2"))
+
+console.log(calc(num1, operator, num2))
