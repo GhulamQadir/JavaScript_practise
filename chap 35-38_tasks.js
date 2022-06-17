@@ -146,15 +146,46 @@ time();
 
 
 // Q:12. Write a JavaScript function that accepts a string as a parameter and find the longest word within the string. 
-function longestWord(string) {
-    var splitString = string.split(" ")
-    var longest = "";
-    for (var i = 0; i < splitString.length; i++) {
-        if (splitString[i] > longest) {
-            longest = splitString[i]
-        }
-    }
-    return longest
-    // for(var i = 0;i<)
+// function longestWord(string) {
+//     var splitString = string.split(" ");
+//     var longest = 0;
+//     var word = "";
+//     for (var i = 0; i < splitString.length; i++) {
+//         if (longest < splitString[i].length) {
+//             longest = splitString[i].length;
+//             word = splitString[i];
+//         }
+//     }
+//     return word;
+// }
+// console.log(`longest word: ${longestWord("development jsLearning mernStackDeveloper")}`)
+
+
+
+// Q:13 Write a JavaScript function that accepts two arguments, a string and a letter and the function will count the number of
+// occurrences of the specified letter within the string. Sample arguments : 'JSResourceS.com', 'o'
+
+// function countOccu(string, letter) {
+//     var count = string.split(letter).length;
+//     return count - 1;
+// }
+// console.log(countOccu("this is iia pencil", "i"))
+
+
+
+// Q:14 part(1)Create 2 functions that calculate properties of a circle, using the definitions here.
+
+function calcCircumference(radius) {
+    var circumference = 2 * 3.14 * radius;
+    return circumference;
 }
-console.log(longestWord("development sdsgdsdfsdsdfsgdfsgdfsgdf jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj"))
+document.write(`<br><br>The circumference is ${calcCircumference(2)}`)
+
+
+//part(2) Create a function called calcArea:
+function calcArea(radius) {
+    var squareRadius = radius * radius
+    var area = 3.14 * squareRadius;
+    return area;
+}
+document.write(`<br>The area is ${calcArea(7)}`)
