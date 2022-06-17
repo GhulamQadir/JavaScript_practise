@@ -93,17 +93,68 @@ time();
 
 
 // Q:8. Write a nested function that computes hypotenuse of a right angle triangle. Hypotenuse2 = B
-function hypotenuse() {
-    var base = Number(prompt("Enter base"))
-    var perpend = Number(prompt("Enter perpendicular"))
-    function square() {
-        base = base * base
-        perpend = perpend * perpend
+// function hypotenuse() {
+//     var base = Number(prompt("Enter base"))
+//     var perpend = Number(prompt("Enter perpendicular"))
+//     function square() {
+//         base = base * base
+//         perpend = perpend * perpend
 
+//     }
+//     square();
+//     var hypot = base + perpend;
+//     var takingSqrt = Math.sqrt(hypot).toFixed(2)
+//     return takingSqrt;
+// }
+// document.write(`<br><br>Hypotenuse of a given values is: ${hypotenuse()}`)
+
+
+
+// Q:9. Write a function that calculates the area of a rectangle. A = width * height
+// function area(height, width) {
+//     return height * width
+// }
+// console.log(`Area of a triangle is ${area(6, 4)}`)
+
+
+
+// Q:10 Write a JavaScript function that checks whether a passed string is palindrome or not?
+// function palindrome(word) {
+//     var convert = word.split("").reverse().join("");
+//     if (word === convert) {
+//         alert("This is a palindrome word")
+//     }
+//     else {
+//         alert("This is not a palindrome word")
+//     }
+// }
+// palindrome("deed")
+
+
+
+// Q:11. Write a JavaScript function that accepts a string as a parameter and converts the first letter of each word of the string in upper case. 
+// function capitalize(string) {
+//     let words = string.split(" ")
+//     for (var i = 0; i < words.length; i++) {
+//         words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1);
+//     }
+
+//     return words.join(" ");
+// }
+// console.log(capitalize("the quick brown fox"))
+
+
+
+// Q:12. Write a JavaScript function that accepts a string as a parameter and find the longest word within the string. 
+function longestWord(string) {
+    var splitString = string.split(" ")
+    var longest = "";
+    for (var i = 0; i < splitString.length; i++) {
+        if (splitString[i] > longest) {
+            longest = splitString[i]
+        }
     }
-    square();
-    var hypot = base + perpend;
-    var takingSqrt = Math.sqrt(hypot).toFixed(2)
-    return takingSqrt;
+    return longest
+    // for(var i = 0;i<)
 }
-document.write(`<br><br>Hypotenuse of a given values is: ${hypotenuse()}`)
+console.log(longestWord("development sdsgdsdfsdsdfsgdfsgdfsgdf jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj"))
