@@ -406,7 +406,7 @@ console.log(`My percentage is ${perRound}`);
 // }
 
 
-// Chap:42 (do...while loops) always runs 1 time(no issue condition is false or true) 
+// Chap:42 (do...while loops) always runs 1 time(no issue condition is false or true)
 // var a = 1;
 // do {
 //     console.log(a)
@@ -426,18 +426,18 @@ console.log(`My percentage is ${perRound}`);
 
 
 // palindrome word
-var word = prompt("Enter any word")
-var palin = "";
-for (var i = word.length - 1; i >= 0; i--) {
-    palin += word[i]
-    console.log(word.lastIndexOf())
-}
-console.log(word)
-console.log(palin)
+// var word = prompt("Enter any word")
+// var palin = "";
+// for (var i = word.length - 1; i >= 0; i--) {
+//     palin += word[i]
+//     console.log(word.lastIndexOf())
+// }
+// console.log(word)
+// console.log(palin)
 
-if (palin === word) {
-    alert(`${word} is a palindrome word`)
-}
-else {
-    alert(`${word} is not a palindrome word`)
-}
+// if (palin === word) {
+//     alert(`${word} is a palindrome word`)
+// }
+// else {
+//     alert(`${word} is not a palindrome word`)
+// }
