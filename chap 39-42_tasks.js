@@ -76,3 +76,45 @@
 //     }
 // }
 // mainFunction();
+
+
+
+// Q:6. Write a function to delete all vowels from a sentence. Assume that the sentence is not more than 25 characters long
+// function removeVowels() {
+//     var sentence = "Learning mern stack development"
+//     sentence = sentence.replace(/[aeiou]/gi, "");
+//     return sentence;
+// }
+// console.log(removeVowels())
+
+
+
+// Q:8. The distance between two cities (in km.) is input through the keyboard. Write four functions to convert and print this distance in meters, feet, inches and centimeters.
+var distance = Number(prompt("Distance between two cities in km"))
+document.write(`<center><h3>Distance in km is: ${distance}</h3>`)
+function distanceInMeters() {
+    distance = distance * 1000
+    return document.write((`Distance in meters is: ${distance}<br>`));
+}
+distanceInMeters()
+
+
+function distanceInFeet() {
+    distance = distance * 3280.84
+    return document.write((`Distance in feet is: ${distance}<br>`));
+}
+distanceInFeet()
+
+
+function distanceInInches() {
+    distance = distance * 39370.1
+    return document.write((`Distance in inches is: ${distance}<br>`));
+}
+distanceInInches()
+
+
+function distanceInCentimeters() {
+    distance = distance * 100000
+    return document.write((`Distance in centimeters is: ${distance}<br>`));
+}
+distanceInCentimeters()
