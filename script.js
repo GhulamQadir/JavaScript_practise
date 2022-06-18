@@ -355,26 +355,89 @@ console.log(`My percentage is ${perRound}`);
 
 
 // CALCULATOR
-function calc(num1, operator, num2) {
-    if (operator == "+") {
-        return num1 + num2
-    }
-    else if (operator == "-") {
-        return num1 - num2
-    }
-    else if (operator == "*") {
-        return num1 * num2
-    }
-    else if (operator == "/") {
-        return num1 / num2
-    }
-    else {
-        return "Incorrect Operator!"
-    }
+// function calc(num1, operator, num2) {
+//     if (operator == "+") {
+//         return num1 + num2
+//     }
+//     else if (operator == "-") {
+//         return num1 - num2
+//     }
+//     else if (operator == "*") {
+//         return num1 * num2
+//     }
+//     else if (operator == "/") {
+//         return num1 / num2
+//     }
+//     else {
+//         return "Incorrect Operator!"
+//     }
+// }
+
+// var num1 = Number(prompt("Enter number 1"))
+// var operator = prompt("Enter operator")
+// var num2 = Number(prompt("Enter number 2"))
+
+// console.log(calc(num1, operator, num2))
+
+
+
+
+// Chap 39 & 40: switch statements: How to start them and how to complete them
+// var day = new Date().getDay() //getting current day by index
+// switch (day) {
+//     case 0:
+//         alert("It's fun day")
+//         break;
+//     case 6:
+//         alert("It's fun day")
+//         break;
+//     default: alert("It's a working day 😐​")
+
+// }
+
+
+
+
+// chap 41: while loops
+// var a = 1;
+// while (a <= 10) {
+//     console.log(a)
+//     a++;
+// }
+
+
+// Chap:42 (do...while loops) always runs 1 time(no issue condition is false or true) 
+// var a = 1;
+// do {
+//     console.log(a)
+//     a++;
+// }
+// while (a > 10);
+
+
+// for loop nested(printing right angle triangle)
+// for (var i = 0; i < 7; i++) {
+//     for (j = 0; j < i; j++) {
+//         document.write("*")
+//     }
+//     document.write("<br>")
+// }
+
+
+
+// palindrome word
+var word = prompt("Enter any word")
+var palin = "";
+for (var i = word.length - 1; i >= 0; i--) {
+    palin += word[i]
+    console.log(word.lastIndexOf())
 }
+console.log(word)
+console.log(palin)
 
-var num1 = Number(prompt("Enter number 1"))
-var operator = prompt("Enter operator")
-var num2 = Number(prompt("Enter number 2"))
-
-console.log(calc(num1, operator, num2))
+if (palin === word) {
+    alert(`${word} is a palindrome word`)
+}
+else {
+    alert(`${word} is not a palindrome word`)
+}
