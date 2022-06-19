@@ -89,32 +89,65 @@
 
 
 
+// Q:7. Write a function with switch statement to count the number of occurrences of any two vowels in succession in a line of text
+
+function countOccurenes() {
+
+    var sentence = "Pleases read this application and give me gratuity";
+    for (var i = 0; i < sentence.length; i++) {
+        console.log(sentence[i])
+        // if (sentence[i] === "ae" || sentence[i] === "ea" || sentence[i] === "io" || sentence[i] === "ou") { }
+        // sentence = sentence[i].length;
+
+    }
+    return sentence;
+
+}
+console.log(countOccurenes())
+
 // Q:8. The distance between two cities (in km.) is input through the keyboard. Write four functions to convert and print this distance in meters, feet, inches and centimeters.
-var distance = Number(prompt("Distance between two cities in km"))
-document.write(`<center><h3>Distance in km is: ${distance}</h3>`)
-function distanceInMeters() {
-    distance = distance * 1000
-    return document.write((`Distance in meters is: ${distance}<br>`));
-}
-distanceInMeters()
+// var distance = Number(prompt("Distance between two cities in km"))
+// document.write(`<center><h3>Distance in km is: ${distance}</h3>`)
+// function distanceInMeters() {
+//     distance = distance * 1000
+//     return document.write((`Distance in meters is: ${distance}<br>`));
+// }
+// distanceInMeters()
 
 
-function distanceInFeet() {
-    distance = distance * 3280.84
-    return document.write((`Distance in feet is: ${distance}<br>`));
-}
-distanceInFeet()
+// function distanceInFeet() {
+//     distance = distance * 3280.84
+//     return document.write((`Distance in feet is: ${distance}<br>`));
+// }
+// distanceInFeet()
 
 
-function distanceInInches() {
-    distance = distance * 39370.1
-    return document.write((`Distance in inches is: ${distance}<br>`));
-}
-distanceInInches()
+// function distanceInInches() {
+//     distance = distance * 39370.1
+//     return document.write((`Distance in inches is: ${distance}<br>`));
+// }
+// distanceInInches()
 
 
-function distanceInCentimeters() {
-    distance = distance * 100000
-    return document.write((`Distance in centimeters is: ${distance}<br>`));
-}
-distanceInCentimeters()
+// function distanceInCentimeters() {
+//     distance = distance * 100000
+//     return document.write((`Distance in centimeters is: ${distance}<br>`));
+// }
+// distanceInCentimeters()
+
+
+
+// Q:9. Write a program to calculate overtime pay of employees.Overtime is paid at the rate of Rs. 12.00 per hour for every hour
+// worked above 40 hours. Assume that employees do not work for fractional part of an hour.
+// function calcOverTime() {
+//     var overtime = Number(prompt("How much hours you work overtime in this week?"))
+//     var salary = 40000;
+//     var total = salary + (overtime * 12);
+//     return total;
+// }
+// console.log(calcOverTime())
+
+
+
+// Q:10 A cashier has currency notes of denominations 10, 50 and 100. If the amount to be withdrawn is input through the keyboard in hundreds, find the total number of currency notes
+// of each denomination the cashier will have to give to the withdrawer
