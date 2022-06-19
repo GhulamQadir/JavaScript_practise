@@ -91,19 +91,64 @@
 
 // Q:7. Write a function with switch statement to count the number of occurrences of any two vowels in succession in a line of text
 
-function countOccurenes() {
 
-    var sentence = "Pleases read this application and give me gratuity";
-    for (var i = 0; i < sentence.length; i++) {
-        console.log(sentence[i])
-        // if (sentence[i] === "ae" || sentence[i] === "ea" || sentence[i] === "io" || sentence[i] === "ou") { }
-        // sentence = sentence[i].length;
 
+function countOccurences() {
+
+    var sentence = "Pleases read this application and give me gratuity heea";
+    var splitSentence = sentence.split("");
+    var word = splitSentence;
+
+    var newPair = []
+
+
+    var pairOfVowels = [];
+    for (var i = 0; i < word.length - 1; i++) {
+        var pair = word[i] + word[i + 1]
+
+
+        if (checkPairForVowel(pair)) {
+            newPair.push(pair)
+            console.log(newPair.length)
+        }
     }
-    return sentence;
+    function checkPairForVowel() {
+        var firstChar = pair[0]
+        var secondChar = pair[1]
+        if (isVowel(firstChar) && isVowel(secondChar)) {
+            return true
 
+        }
+    } checkPairForVowel()
+
+
+    function isVowel(pair) {
+        switch (pair) {
+            case "a":
+                return true;
+            case "e":
+                return true;
+            case "i":
+                return true;
+            case "o":
+                return true;
+            case "u":
+                return true;
+
+        }return false;
+    }
+    isVowel()
 }
-console.log(countOccurenes())
+countOccurences();
+
+// function denomination() {
+//     var notes = [100, 50, 10]
+//     var amount = Number(prompt("enter total amount")) / notes
+//     console.log(amount)
+
+
+// }
+// denomination()
 
 // Q:8. The distance between two cities (in km.) is input through the keyboard. Write four functions to convert and print this distance in meters, feet, inches and centimeters.
 // var distance = Number(prompt("Distance between two cities in km"))
