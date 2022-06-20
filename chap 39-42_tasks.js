@@ -82,22 +82,22 @@
 
 
 // 5. You have learned the function indexOf. Code your own custom function that will perform the same functionality. You can code for single character as of now
-function findIndexOf() {
-    var string = "hello world~"
-    var splittedString = string.split("")
-    var findingChar = prompt("Enter the character of which you want to find the index")
+// function findIndexOf() {
+//     var string = "hello world~"
+//     var splittedString = string.split("")
+//     var findingChar = prompt("Enter the character of which you want to find the index")
 
-    for (var i = 0; i < splittedString.length; i++) {
-        if (splittedString[i] === findingChar) {
+//     for (var i = 0; i < splittedString.length; i++) {
+//         if (splittedString[i] === findingChar) {
 
-            return alert(`index of ${findingChar} is ${i}`)
+//             return alert(`index of ${findingChar} is ${i}`)
 
-        }
-    }
-    return alert("Character not found")
+//         }
+//     }
+//     return alert("Character not found")
 
-}
-findIndexOf();
+// }
+// findIndexOf();
 
 
 
@@ -196,5 +196,23 @@ findIndexOf();
 
 
 
+
 // Q:10 A cashier has currency notes of denominations 10, 50 and 100. If the amount to be withdrawn is input through the keyboard in hundreds, find the total number of currency notes
 // of each denomination the cashier will have to give to the withdrawer
+function notesDenominations() {
+    var notes = [100, 50, 10]
+    var amount = Number(prompt("Enter amount to withdraw(in 10s or 100s)"));
+    var distribution100 = Math.floor(amount / notes[0]);
+    console.log(distribution100)
+
+    var distribution50 = Math.floor((amount - (distribution100 * 100)) / notes[1])
+
+    console.log(distribution50)
+
+    var distribution10 = Math.floor((amount - (distribution100 * 100 + distribution50 * 50)) / notes[2])
+    console.log(distribution10)
+
+
+    return document.write(`You will have ${distribution100} hundred notes, ${distribution50} fifty notes and ${distribution10} ten notes`)
+}
+notesDenominations();
