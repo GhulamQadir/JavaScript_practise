@@ -79,6 +79,28 @@
 
 
 
+
+
+// 5. You have learned the function indexOf. Code your own custom function that will perform the same functionality. You can code for single character as of now
+function findIndexOf() {
+    var string = "hello world~"
+    var splittedString = string.split("")
+    var findingChar = prompt("Enter the character of which you want to find the index")
+
+    for (var i = 0; i < splittedString.length; i++) {
+        if (splittedString[i] === findingChar) {
+
+            return alert(`index of ${findingChar} is ${i}`)
+
+        }
+    }
+    return alert("Character not found")
+
+}
+findIndexOf();
+
+
+
 // Q:6. Write a function to delete all vowels from a sentence. Assume that the sentence is not more than 25 characters long
 // function removeVowels() {
 //     var sentence = "Learning mern stack development"
@@ -91,64 +113,44 @@
 
 // Q:7. Write a function with switch statement to count the number of occurrences of any two vowels in succession in a line of text
 
+// function countOccurences() {
 
+//     var sentence = "Pleases read this application and give me gratuity heea";
+//     var splittedSentence = sentence.split("");
+//     var word = splittedSentence;
+//     var newPair = []
+//     var pair;
 
-function countOccurences() {
+//     for (var i = 0; i < word.length - 1; i++) {
+//         pair = word[i] + word[i + 1]
 
-    var sentence = "Pleases read this application and give me gratuity heea";
-    var splitSentence = sentence.split("");
-    var word = splitSentence;
+//         if (isVowel(pair[0]) && isVowel(pair[1])) {
 
-    var newPair = []
+//             newPair.push(pair)
+//         }
+//     }
+//     document.write(`Such occurences are: ${newPair}`)
+//     console.log(newPair.length)
 
+//     function isVowel(pair) {
+//         switch (pair) {
+//             case "a":
+//                 return true;
+//             case "e":
+//                 return true;
+//             case "i":
+//                 return true;
+//             case "o":
+//                 return true;
+//             case "u":
+//                 return true;
 
-    var pairOfVowels = [];
-    for (var i = 0; i < word.length - 1; i++) {
-        var pair = word[i] + word[i + 1]
-
-
-        if (checkPairForVowel(pair)) {
-            newPair.push(pair)
-            console.log(newPair.length)
-        }
-    }
-    function checkPairForVowel() {
-        var firstChar = pair[0]
-        var secondChar = pair[1]
-        if (isVowel(firstChar) && isVowel(secondChar)) {
-            return true
-
-        }
-    } checkPairForVowel()
-
-
-    function isVowel(pair) {
-        switch (pair) {
-            case "a":
-                return true;
-            case "e":
-                return true;
-            case "i":
-                return true;
-            case "o":
-                return true;
-            case "u":
-                return true;
-
-        }return false;
-    }
-    isVowel()
-}
-countOccurences();
-
-// function denomination() {
-//     var notes = [100, 50, 10]
-//     var amount = Number(prompt("enter total amount")) / notes
-//     console.log(amount)
-
-
+//         }return false;
+//     }
 // }
-// denomination()
+// countOccurences();
+
+
 
 // Q:8. The distance between two cities (in km.) is input through the keyboard. Write four functions to convert and print this distance in meters, feet, inches and centimeters.
 // var distance = Number(prompt("Distance between two cities in km"))
