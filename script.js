@@ -470,3 +470,27 @@ function mouseOut() {
     console.log("Mouse out")
 }
 
+
+
+// chap 49: events: reading field values
+function getInputVal() {
+    var inputVal = document.getElementById("input_val");
+    alert(`Hi ${inputVal.value}`);
+    inputVal.value = ""
+}
+
+
+
+// chap: 49 Setting field values
+// function setValue() {
+//     var inputVal = document.getElementById("input_val");
+//     inputVal.value = "Ghulam Qadir"
+// }
+// setValue()
+
+
+// function setHeading() {
+//     var para = document.getElementById('heading');
+//     para.innerHTML = "This is Heading 1"
+// }
+// setHeading();

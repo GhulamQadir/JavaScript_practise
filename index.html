@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
 
 <body>
     <h1>Learning Web Development</h1>
@@ -36,8 +38,58 @@
         this.style.backgroundColor='blue'" /> -->
 
 
+    <!-- events: reading and setting field values -->
+    <!-- <input id="input_val" type="text" placeholder="Username" onblur="this.style.backgroundColor = 'azure'" onfocus="
+        this.style.backgroundColor='light-cyan'" />
+    <br />
+    <button onclick="getInputVal()">Get value</button>
+
+    <h1 id="heading"></h1> -->
+
+    <!-- Calculator -->
+    <div>
+        <center><input id="inputVal" type="text"></center>
+        <center>
+            <div>
+                <button id="clear_btn" onclick="clearInput()">C</button>
+                <button class="button" onclick="getNum('00')">00</button>
+                <button class="button" onclick="getNum('.')">.</button>
+                <button class="button" onclick="back()"><i class="fas fa-backspace"></i></button>
+            </div>
+            <div>
+                <button class="button" onclick="getNum('7')">7</button>
+                <button class="button" onclick="getNum('8')">8</button>
+                <button class="button" onclick="getNum('9')">9</button>
+                <button class="button" onclick="getNum('*')">x</button>
+            </div>
+
+            <div>
+                <button class="button" onclick="getNum('4')">4</button>
+                <button class="button" onclick="getNum('5')">5</button>
+                <button class="button" onclick="getNum('6')">6</button>
+                <button class="button" onclick="getNum('-')">-</button>
+            </div>
+
+            <div>
+                <button class="button" onclick="getNum('1')">1</button>
+                <button class="button" onclick="getNum('2')">2</button>
+                <button class="button" onclick="getNum('3')">3</button>
+                <button class="button" onclick="getNum('+')">+</button>
+            </div>
+
+            <div>
+                <button class="button" onclick="getNum('0')">0</button>
+                <button class="button" onclick="getNum('/')">÷</button>
+                <button class="button" onclick="getNum('%')">%</button>
+                <button class="button" onclick="getResult()">=</button>
+            </div>
+
+        </center>
+    </div>
+
 </body>
-<script src=" chap 39-42_tasks.js"></script>
+<script src="calculator.js"></script>
+<!-- <script src=" chap 39-42_tasks.js"></script> -->
 <!-- <script src="chap 35-38_tasks.js"></script> -->
 <!-- <script src="chap 31-34_tasks.js"></script> -->
 <!-- <script src="array.js"></script> -->

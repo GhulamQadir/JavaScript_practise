@@ -7,3 +7,23 @@
     width: 25%;
     padding: 5px;
 }
+
+.button {
+    width: 45px;
+    /* font-size: 50; */
+    /* padding: 3px 8px 3px 8px; */
+    border: none;
+    margin: 0px 0px 0px 0px;
+    height: 20px;
+}
+
+#clear_btn {
+    border: none;
+    width: 45px;
+    border-spacing: 0cm;
+}
+
+#inputVal {
+    height: 50px;
+    width: auto;
+}
