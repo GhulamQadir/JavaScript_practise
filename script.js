@@ -398,6 +398,7 @@ console.log(`My percentage is ${perRound}`);
 
 
 
+
 // chap 41: while loops
 // var a = 1;
 // while (a <= 10) {
@@ -441,3 +442,31 @@ console.log(`My percentage is ${perRound}`);
 // else {
 //     alert(`${word} is not a palindrome word`)
 // }
+
+
+
+// chap 45 Events: link
+// function greet() {
+//     var input = prompt("Enter your name");
+//     alert(`Hi ${input}`)
+// }
+
+
+
+// chap 45 Events: button
+function buttonClick() {
+    alert("function is running")
+}
+
+
+
+// chap 45 Events: mouse
+function mouseOver() {
+    console.log("Mouse over")
+}
+
+
+function mouseOut() {
+    console.log("Mouse out")
+}
+
