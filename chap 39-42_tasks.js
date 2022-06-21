@@ -203,7 +203,6 @@ function notesDenominations() {
     var notes = [100, 50, 10, 1]
     var amount = Number(prompt("Enter amount to withdraw(in 10s or 100s)"));
     var distribution100 = Math.floor(amount / notes[0]);
-    console.log(distribution100)
 
     var distribution50 = Math.floor((amount - (distribution100 * 100)) / notes[1])
 
@@ -214,7 +213,6 @@ function notesDenominations() {
 
     var distribution1 = Math.floor((amount - (distribution100 * 100 + distribution50 * 50 + distribution10 * 10)) / notes[3])
     console.log(distribution1)
-
 
     return document.write(`You will have ${distribution100} hundred notes, ${distribution50} fifty notes, ${distribution10} ten notes and ${distribution1} one coins`)
 }
