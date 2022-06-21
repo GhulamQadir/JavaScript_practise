@@ -200,7 +200,7 @@
 // Q:10 A cashier has currency notes of denominations 10, 50 and 100. If the amount to be withdrawn is input through the keyboard in hundreds, find the total number of currency notes
 // of each denomination the cashier will have to give to the withdrawer
 function notesDenominations() {
-    var notes = [100, 50, 10]
+    var notes = [100, 50, 10, 1]
     var amount = Number(prompt("Enter amount to withdraw(in 10s or 100s)"));
     var distribution100 = Math.floor(amount / notes[0]);
     console.log(distribution100)
@@ -212,7 +212,10 @@ function notesDenominations() {
     var distribution10 = Math.floor((amount - (distribution100 * 100 + distribution50 * 50)) / notes[2])
     console.log(distribution10)
 
+    var distribution1 = Math.floor((amount - (distribution100 * 100 + distribution50 * 50 + distribution10 * 10)) / notes[3])
+    console.log(distribution1)
 
-    return document.write(`You will have ${distribution100} hundred notes, ${distribution50} fifty notes and ${distribution10} ten notes`)
+
+    return document.write(`You will have ${distribution100} hundred notes, ${distribution50} fifty notes, ${distribution10} ten notes and ${distribution1} one coins`)
 }
 notesDenominations();
