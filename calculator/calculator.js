@@ -11,10 +11,15 @@ function clearInput() {
 }
 
 function getResult() {
-    var inputVal = document.getElementById('inputVal');
-    var history = document.getElementById('history')
-    history.innerHTML = inputVal.value;
-    inputVal.value = eval(inputVal.value)
+    try {
+        var inputVal = document.getElementById('inputVal');
+        var history = document.getElementById('history')
+        history.innerHTML = inputVal.value;
+        inputVal.value = eval(inputVal.value)
+
+    } catch (error) {
+        alert(error)
+    }
 
 }
 
