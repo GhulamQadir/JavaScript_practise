@@ -5,11 +5,15 @@ function getNum(num) {
 
 function clearInput() {
     var inputVal = document.getElementById('inputVal');
+    var history = document.getElementById('history')
     inputVal.value = "";
+    history.innerHTML = ""
 }
 
 function getResult() {
     var inputVal = document.getElementById('inputVal');
+    var history = document.getElementById('history')
+    history.innerHTML = inputVal.value;
     inputVal.value = eval(inputVal.value)
 
 }

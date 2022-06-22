@@ -482,11 +482,11 @@ function getInputVal() {
 
 
 // chap: 49 Setting field values
-// function setValue() {
-//     var inputVal = document.getElementById("input_val");
-//     inputVal.value = "Ghulam Qadir"
-// }
-// setValue()
+function setValue() {
+    var inputVal = document.getElementById("input_val");
+    inputVal.value = "Ghulam Qadir"
+}
+setValue()
 
 
 // function setHeading() {

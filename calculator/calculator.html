@@ -16,12 +16,15 @@
         <h2 id="heading">Calculator</h2>
     </center>
     <div id="main_div">
-        <center><input id="inputVal" type="text"></center>
+        <center>
+            <p id="history"></p>
+            <input id="inputVal" type="text">
+        </center>
         <center>
             <div class="columns">
                 <button id="clear_btn" onclick="clearInput()">C</button>
-                <button class="button" onclick="getNum('00')">00</button>
-                <button class="button" onclick="getNum('.')">.</button>
+                <button class="button" onclick="getNum('%')">%</button>
+                <button class="button" onclick="getNum('/')">÷</button>
                 <button class="button" onclick="back()"><i class="fas fa-backspace"></i></button>
             </div>
             <div>
@@ -46,9 +49,9 @@
             </div>
 
             <div>
+                <button class="button" onclick="getNum('00')">00</button>
                 <button class="button" onclick="getNum('0')">0</button>
-                <button class="button" onclick="getNum('/')">÷</button>
-                <button class="button" onclick="getNum('%')">%</button>
+                <button class="button" onclick="getNum('.')">.</button>
                 <button id="equalsToBtn" onclick="getResult()">=</button>
             </div>
 
