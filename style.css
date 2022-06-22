@@ -7,3 +7,15 @@
     width: 25%;
     padding: 5px;
 }
+
+
+
+.big_img {
+    height: 350px;
+    width: 350px;
+}
+
+.small_img {
+    height: 250px;
+    width: 250px;
+}

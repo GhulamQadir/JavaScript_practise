@@ -482,11 +482,11 @@ function getInputVal() {
 
 
 // chap: 49 Setting field values
-function setValue() {
-    var inputVal = document.getElementById("input_val");
-    inputVal.value = "Ghulam Qadir"
-}
-setValue()
+// function setValue() {
+//     var inputVal = document.getElementById("input_val");
+//     inputVal.value = "Ghulam Qadir"
+// }
+// setValue()
 
 
 // function setHeading() {
@@ -494,3 +494,50 @@ setValue()
 //     para.innerHTML = "This is Heading 1"
 // }
 // setHeading();
+
+
+// chap 51: Reading and Setting paragraph text
+// function readMore() {
+//     var text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<a href='javascript:void(0)' onClick='seeLess()'>see less</a>"
+//     var paragraph = document.getElementById('para');
+//     paragraph.innerHTML = text;
+// }
+
+// function seeLess() {
+//     var lessText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore etdolore magna aliqua. Ut enim ad minim veniam, quis nostrud <a href='javascript:void(0)' onclick='readMore()'>See more</a>"
+//     var paragraph = document.getElementById('para');
+//     paragraph.innerHTML = lessText;
+// }
+
+
+
+// chap 42: Manipulating images and text
+function bigImage() {
+    var img = document.getElementById('car_img')
+    img.className += ' big_img'  //concatenating with previous class .className += ' hidden'(like this)
+}
+
+function smallImg() {
+    var img = document.getElementById('car_img')
+    img.className += ' small_img'
+}
+
+// chap:53 Swapping images
+// function changeImg() {
+//     var img = document.getElementById('phone_img')
+//     img.src = "https://service.pcconnection.com/images/inhouse/B6736E4D-D48D-4006-A6A7-1DE858E9D07E.jpg"
+// }
+
+// function previousImg() {
+//     var img = document.getElementById('phone_img')
+//     img.src = "https://i0.wp.com/techarea24.com/wp-content/uploads/2021/02/12.jpg?fit=1200%2C800&ssl=1"
+
+// }
+
+
+
+// change image by one function
+function changeImg(id, src) {
+    var img = document.getElementById('phone_img')
+    img.src = src
+}

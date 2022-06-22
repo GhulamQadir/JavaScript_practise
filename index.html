@@ -33,19 +33,43 @@
 
 
     <!-- event: fields -->
-    <!-- <input type="text" placeholder="Username" onblur="this.style.backgroundColor = 'cyan'" onfocus="
+    <!-- <input type="text" placeholder="Username" ontblur="this.style.backgroundColor = 'cyan'" onfocus="
         this.style.backgroundColor='blue'" /> -->
 
 
     <!-- events: reading and setting field values -->
-    <input id="input_val" type="text" placeholder="Username" onblur="this.style.backgroundColor = 'azure'" onfocus="
+    <!-- <input id="input_val" type="text" placeholder="Username" onblur="this.style.backgroundColor = 'azure'" onfocus="
         this.style.backgroundColor='light-cyan'" />
     <br />
     <button onclick="getInputVal()">Get value</button>
 
-    <h1 id="heading"></h1>
+    <h1 id="heading"></h1> -->
 
-    
+
+
+    <!-- chap 51: Reading and Setting paragraph text -->
+    <!-- <p id="para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+        etdolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud <a href="javascript:void(0)" onclick="readMore()">See
+            more</a></p> -->
+
+
+    <!-- Manipulating images and text -->
+
+    <img onmouseover="bigImage()" onmouseout="smallImg()" id="car_img"
+        src="https://propakistani.pk/wp-content/uploads/2020/03/1920px-2019_Kia_Sportage_2_CRDi_ISG_S-A_1.6_Front-e1583320359567.jpg"
+        height="250" width="250" />
+
+
+
+
+    <!-- chap 53 Swapping images -->
+    <!-- <img id="phone_img" src="https://i0.wp.com/techarea24.com/wp-content/uploads/2021/02/12.jpg?fit=1200%2C800&ssl=1"
+        onmouseover="changeImg()" onmouseout="previousImg()" height="400" width="400" /> -->
+
+    <!-- change img by just giving parametres -->
+    <img id="phone_img" src="images/img_1.jpeg" onmouseover="changeImg('phone_img', 'images/img.jpeg')"
+        onmouseout="changeImg('phone_img','images/img_1.jpeg')" height="400" width="400" />
 
     </div>
 
