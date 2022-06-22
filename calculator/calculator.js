@@ -16,8 +16,6 @@ function getResult() {
 
 function back() {
     var inputVal = document.getElementById('inputVal');
-    // var removeOne = inputVal.value
-    // removeOne = removeOne.slice(0, -1)
     inputVal.value = inputVal.value.slice(0, -1)
 
 }
