@@ -558,13 +558,24 @@ function mouseOut() {
 
 
 // chap 56: Target all elements by tag name
-var tableRow = document.getElementsByTagName('tr')
-tableRow[2].style.backgroundColor = 'lightGreen'
+// var tableRow = document.getElementsByTagName('tr')
+// tableRow[2].style.backgroundColor = 'lightGreen'
 
 
 // by applying for loop for all the headings
-var headings = document.getElementsByTagName('h1')
-for (var i = 0; i < headings.length; i++) {
-    headings[i].style.fontFamily = 'Arial, Helvetica, sans-serif'
-}
+// var headings = document.getElementsByTagName('h1')
+// for (var i = 0; i < headings.length; i++) {
+//     headings[i].style.fontFamily = 'Arial, Helvetica, sans-serif'
+// }
 
+
+
+
+// chap 57:Target some elements by tag name
+var headings = document.getElementById('parent')
+var parent = headings.getElementsByTagName('h1');
+for (var i = 0; i < parent.length; i++) {
+    parent[i].style.fontFamily = 'Arial, Helvetica, sans-serif'
+    parent[i].style.color = 'blue'
+
+}
