@@ -544,13 +544,27 @@ function mouseOut() {
 
 
 
-function changeStyle() {
-    var imgStyle = document.getElementById('changeStyle')
-    imgStyle.style.height = '450px'
-    imgStyle.style.width = '450px'
+// function changeStyle() {
+//     var imgStyle = document.getElementById('changeStyle')
+//     imgStyle.style.height = '450px'
+//     imgStyle.style.width = '450px'
+// }
+
+// function changeFont() {
+//     var para = document.getElementById('para')
+//     para.style.fontSize = "25px"
+// }
+
+
+
+// chap 56: Target all elements by tag name
+var tableRow = document.getElementsByTagName('tr')
+tableRow[2].style.backgroundColor = 'lightGreen'
+
+
+// by applying for loop for all the headings
+var headings = document.getElementsByTagName('h1')
+for (var i = 0; i < headings.length; i++) {
+    headings[i].style.fontFamily = 'Arial, Helvetica, sans-serif'
 }
 
-function changeFont() {
-    var para = document.getElementById('para')
-    para.style.fontSize = "25px"
-}
