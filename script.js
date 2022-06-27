@@ -473,11 +473,11 @@ function mouseOut() {
 
 
 // chap 49: events: reading field values
-function getInputVal() {
-    var inputVal = document.getElementById("input_val");
-    alert(`Hi ${inputVal.value}`);
-    inputVal.value = ""
-}
+// function getInputVal() {
+//     var inputVal = document.getElementById("input_val");
+//     alert(`Hi ${inputVal.value}`);
+//     inputVal.value = ""
+// }
 
 
 
@@ -512,15 +512,15 @@ function getInputVal() {
 
 
 // chap 42: Manipulating images and text
-function bigImage() {
-    var img = document.getElementById('car_img')
-    img.className += ' big_img'  //concatenating with previous class .className += ' hidden'(like this)
-}
+// function bigImage() {
+//     var img = document.getElementById('car_img')
+//     img.className += ' big_img'  //concatenating with previous class .className += ' hidden'(like this)
+// }
 
-function smallImg() {
-    var img = document.getElementById('car_img')
-    img.className += ' small_img'
-}
+// function smallImg() {
+//     var img = document.getElementById('car_img')
+//     img.className += ' small_img'
+// }
 
 // chap:53 Swapping images
 // function changeImg() {
@@ -537,7 +537,20 @@ function smallImg() {
 
 
 // change image by one function
-function changeImg(id, src) {
-    var img = document.getElementById('phone_img')
-    img.src = src
+// function changeImg(id, src) {
+//     var img = document.getElementById('phone_img')
+//     img.src = src
+// }
+
+
+
+function changeStyle() {
+    var imgStyle = document.getElementById('changeStyle')
+    imgStyle.style.height = '450px'
+    imgStyle.style.width = '450px'
+}
+
+function changeFont() {
+    var para = document.getElementById('para')
+    para.style.fontSize = "25px"
 }

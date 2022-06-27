@@ -72,7 +72,7 @@
 // function mainFunction() {
 //     var func = [getAverage(), getPercentage()]
 //     for (var i = 0; i < func.length; i++) {
-//         document.write(`${func[i]}<br>`)
+ //         document.write(`${func[i]}<br>`)
 //     }
 // }
 // mainFunction();
