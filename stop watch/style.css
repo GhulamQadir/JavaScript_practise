@@ -2,6 +2,7 @@ body {
     max-width: max-content;
     margin: auto;
     padding: 30px;
+    background-color: orange;
 }
 
 /* .container {

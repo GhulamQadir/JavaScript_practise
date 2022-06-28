@@ -3,11 +3,26 @@ var second = 00;
 var milliSecond = 00;
 var start_stop = document.getElementById('start_stop')
 var clicked = false;
+var stopHistory = [];
 
 
 var getMinute = document.getElementById('minute')
 var getSecond = document.getElementById('second')
 var getMilliSecond = document.getElementById('milliSecond')
+
+
+var a = document.getElementById('min')
+var b = document.getElementById('sec')
+var c = document.getElementById('milSec')
+
+for (var i = 0; i < stopHistory.length; i++) {
+    a.innerHTML = stopHistory[i].minute
+    b.innerHTML = stopHistory[i].second
+    c.innerHTML = stopHistory[i].milliSecond
+
+}
+
+
 
 
 var interval = "";
@@ -57,6 +72,12 @@ function toggle() {
 
 function reset() {
     clearInterval(interval)
+
+    // history.push({ "minute": minute, "second": second, "milliSecond": milliSecond })
+    stopHistory.push({ "minute": minute, "second": second, "milliSecond": milliSecond });
+    console.log(stopHistory)
+
+
     milliSecond = "00";
     getMilliSecond.innerHTML = milliSecond;
 
@@ -70,3 +91,4 @@ function reset() {
     start_stop.innerHTML = "Start"
 
 }
+
