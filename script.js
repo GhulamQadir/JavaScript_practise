@@ -572,10 +572,46 @@ function mouseOut() {
 
 
 // chap 57:Target some elements by tag name
-var headings = document.getElementById('parent')
-var parent = headings.getElementsByTagName('h1');
-for (var i = 0; i < parent.length; i++) {
-    parent[i].style.fontFamily = 'Arial, Helvetica, sans-serif'
-    parent[i].style.color = 'blue'
+// var headings = document.getElementById('parent')
+// var parent = headings.getElementsByTagName('h1');
+// for (var i = 0; i < parent.length; i++) {
+//     parent[i].style.fontFamily = 'Arial, Helvetica, sans-serif'
+//     parent[i].style.color = 'blue'
 
+// }
+
+
+
+
+// setInterval function(repeatively running)
+// function timer() {
+//     console.log("running")
+// }
+// setInterval
+//     (timer, 1000)
+
+
+
+// setTimeOut (after sometime)
+// function timeOut() {
+//     console.log("times Up")
+// }
+// setTimeout
+//     (timeOut, 5000)
+
+
+
+// example
+var count = 0;
+var interval;
+function timer() {
+    count++;
+    console.log(count);
 }
+interval = setInterval(timer, 1000)
+
+
+setTimeout(function () {
+    clearInterval(interval)
+    console.log("Times up !")
+}, 5000)
