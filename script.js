@@ -602,16 +602,22 @@ function mouseOut() {
 
 
 // example
-var count = 0;
-var interval;
-function timer() {
-    count++;
-    console.log(count);
-}
-interval = setInterval(timer, 1000)
+// var count = 0;
+// var interval;
+// function timer() {
+//     count++;
+//     console.log(count);
+// }
+// interval = setInterval(timer, 1000)
 
 
-setTimeout(function () {
-    clearInterval(interval)
-    console.log("Times up !")
-}, 5000)
+// setTimeout(function () {
+//     clearInterval(interval)
+//     console.log("Times up !")
+// }, 5000)
+
+
+
+
+// chap 58: The DOM
+console.log(document.childNodes[1].childNodes[2].childNodes[59])
