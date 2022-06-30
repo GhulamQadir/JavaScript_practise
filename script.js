@@ -627,3 +627,10 @@ var a = document.getElementById('parent')
 console.log(a.nodeName)
 console.log(a.childNodes)
 console.log(a.childNodes[0])
+
+
+
+function getElements() {
+    var elements = document.getElementsByTagName('h2')
+    console.log(elements)
+}
