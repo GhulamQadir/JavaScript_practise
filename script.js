@@ -664,6 +664,39 @@ function mouseOut() {
 
 
 // chap 66: The DOM: Attribute names and values
-var para = document.getElementById('para')
-console.log(para.attributes)
-console.log(para.attributes[2].nodeName)
+// var para = document.getElementById('para')
+// console.log(para.attributes)
+// console.log(para.attributes[2].nodeName)
+
+
+
+
+// chap 67: The DOM: Adding nodes
+function add() {
+
+    var row = document.createElement('tr')
+    var column1 = document.createElement('td')
+    var column2 = document.createElement('td')
+
+    // column 1 work
+    var heading = document.createElement('h2');
+    var text = document.createTextNode('Tasks')
+    heading.appendChild(text)
+    column1.appendChild(heading)
+
+
+    // column 2 work
+    var button = document.createElement('button')
+    var btnText = document.createTextNode('delete')
+    button.appendChild(btnText)
+    column2.appendChild(button)
+
+    // appending columns
+    row.appendChild(column1)
+    row.appendChild(column2)
+
+
+    // appending row
+    var tasks = document.getElementById('tasks')
+    tasks.appendChild(row)
+}
