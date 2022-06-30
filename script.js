@@ -620,4 +620,10 @@ function mouseOut() {
 
 
 // chap 58: The DOM
-console.log(document.childNodes[1].childNodes[2].childNodes[59])
+// console.log(document.childNodes[1].childNodes[2].childNodes[59])
+
+
+var a = document.getElementById('parent')
+console.log(a.nodeName)
+console.log(a.childNodes)
+console.log(a.childNodes[0])
