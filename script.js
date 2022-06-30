@@ -638,5 +638,25 @@ function mouseOut() {
 
 // chap 64: The DOM: Counting elements
 
-var list = document.getElementsByTagName('li')
-console.log(list.length)
+// var list = document.getElementsByTagName('li')
+// console.log(list.length)
+
+
+
+
+// chap 65: The DOM: Attributes
+var car = document.getElementById('sportage')
+if (car.hasAttribute('alt')) {
+    console.log("Alt attriabute is available")
+}
+else {
+    console.log("Not avavilable")
+}
+
+
+// get attribute
+console.log(car.getAttribute('id'))
+
+
+// set attribute
+car.setAttribute("class", "car_img")
