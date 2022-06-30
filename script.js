@@ -619,18 +619,24 @@ function mouseOut() {
 
 
 
-// chap 58: The DOM
+// chap 58-63: The DOM
 // console.log(document.childNodes[1].childNodes[2].childNodes[59])
 
 
-var a = document.getElementById('parent')
-console.log(a.nodeName)
-console.log(a.childNodes)
-console.log(a.childNodes[0])
+// var a = document.getElementById('parent')
+// console.log(a.nodeName)
+// console.log(a.childNodes)
+// console.log(a.childNodes[0])
+
+
+// function getElements() {
+//     var elements = document.getElementsByTagName('h2')
+//     console.log(elements)
+// }
 
 
 
-function getElements() {
-    var elements = document.getElementsByTagName('h2')
-    console.log(elements)
-}
+// chap 64: The DOM: Counting elements
+
+var list = document.getElementsByTagName('li')
+console.log(list.length)
