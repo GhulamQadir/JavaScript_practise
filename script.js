@@ -645,18 +645,25 @@ function mouseOut() {
 
 
 // chap 65: The DOM: Attributes
-var car = document.getElementById('sportage')
-if (car.hasAttribute('alt')) {
-    console.log("Alt attriabute is available")
-}
-else {
-    console.log("Not avavilable")
-}
+// var car = document.getElementById('sportage')
+// if (car.hasAttribute('alt')) {
+//     console.log("Alt attriabute is available")
+// }
+// else {
+//     console.log("Not avavilable")
+// }
 
 
 // get attribute
-console.log(car.getAttribute('id'))
+// console.log(car.getAttribute('id'))
 
 
 // set attribute
-car.setAttribute("class", "car_img")
+// car.setAttribute("class", "car_img")
+
+
+
+// chap 66: The DOM: Attribute names and values
+var para = document.getElementById('para')
+console.log(para.attributes)
+console.log(para.attributes[2].nodeName)
