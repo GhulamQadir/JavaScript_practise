@@ -700,3 +700,20 @@ function add() {
     var tasks = document.getElementById('tasks')
     tasks.appendChild(row)
 }
+
+
+
+// chap 69: Objects
+var myProfile = {
+    name: "Ghulam Qadir",
+    email: "ghulamqadirsakaria25@gmail.com",
+    age: 17,
+    education: "Matriculate"
+}
+console.log(myProfile.email);
+
+// adding value(array) in object
+myProfile.skills = ["Mern Stack Developer", "Flutter Developer"]
+
+console.log(myProfile.skills[1])
+console.log(myProfile);
