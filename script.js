@@ -724,23 +724,60 @@ function add() {
 
 
 // chap 71: Objects: Methods
+// var festival = {
+//     name: "Eid",
+//     price: 20,
+//     discountMonths: [6, 7]
+// }
+
+// function calculation() {
+//     var month = new Date();
+//     var currentMonth = month.getMonth()
+//     var price = festival.price;
+
+//     for (var i = 0; i < festival.discountMonths.length; i++) {
+//         if (festival.discountMonths[i] === currentMonth) {
+//             console.log(price *16);
+//             break;
+//         }
+//         return console.log(price * 20);
+//     }
+// }
+// calculation()
+
+
+
+// by using this method(it get the value of the standing object)
+//30 percent discount example
 var festival = {
     name: "Eid",
     price: 20,
-    discountMonths: [6, 7]
-}
+    discountMonths: [6, 7],
+    calculation: function (dicountPercent) {
 
-function calculation() {
-    var month = new Date();
-    var currentMonth = month.getMonth()
-    var price = festival.price;
+        var month = new Date();
+        var currentMonth = month.getMonth()
 
-    for (var i = 0; i < festival.discountMonths.length; i++) {
-        if (festival.discountMonths[i] === currentMonth) {
-            console.log(price * 9);
-            break;
+        for (var i = 0; i < this.discountMonths.length; i++) {
+            if (this.discountMonths[i] === currentMonth) {
+                console.log(`After 30% discount: ${this.price * dicountPercent}`);
+                break;
+            }
+            return this.price * 20
         }
-        return console.log(price * 10);
     }
 }
-calculation()
+var getCalc = festival.calculation(15)
+
+
+
+
+// chap 72: Objects: Constructors
+function BioData(name, email, age, skills) {
+    this.name = name,
+        this.email = email,
+        this.age = age,
+        this.skills = skills
+}
+var bio = new BioData("Ghulam Qadir", "ghulamqadirsakaria25@gmail.com", 17, ["Mern Stack developer", "Flutter developer"]);
+console.log(bio)
