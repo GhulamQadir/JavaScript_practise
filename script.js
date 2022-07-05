@@ -781,3 +781,29 @@ function BioData(name, email, age, skills) {
 }
 var bio = new BioData("Ghulam Qadir", "ghulamqadirsakaria25@gmail.com", 17, ["Mern Stack developer", "Flutter developer"]);
 console.log(bio)
+
+
+
+
+// chap 74: Objects: Prototypes
+function Festival(name, price, discountMonths) {
+    this.name = name,
+        this.price = price,
+        this.discountMonths = discountMonths
+}
+
+Festival.prototype.calculation = function (dicountPercent) {
+    var month = new Date();
+    var currentMonth = month.getMonth()
+
+    for (var i = 0; i < this.discountMonths.length; i++) {
+        if (this.discountMonths[i] === currentMonth) {
+            console.log(`After 30% discount: ${this.price * dicountPercent}`);
+            break;
+        }
+        return this.price * 20
+    }
+}
+
+var eidFestival = new Festival("Eid-ul-Fitr", 20, [6, 7])
+console.log(eidFestival)
