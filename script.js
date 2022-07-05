@@ -704,16 +704,43 @@ function add() {
 
 
 // chap 69: Objects
-var myProfile = {
-    name: "Ghulam Qadir",
-    email: "ghulamqadirsakaria25@gmail.com",
-    age: 17,
-    education: "Matriculate"
+// var myProfile = {
+//     name: "Ghulam Qadir",
+//     email: "ghulamqadirsakaria25@gmail.com",
+//     age: 17,
+//     education: "Matriculate"
+// }
+// console.log(myProfile.email);
+
+// // adding value(array) in object
+// myProfile.skills = ["Mern Stack Developer", "Flutter Developer"]
+
+// console.log(myProfile.skills[1])
+// console.log(myProfile);
+
+// var propertyExists = "age" in myProfile;
+// console.log(propertyExists)
+
+
+
+// chap 71: Objects: Methods
+var festival = {
+    name: "Eid",
+    price: 20,
+    discountMonths: [6, 7]
 }
-console.log(myProfile.email);
 
-// adding value(array) in object
-myProfile.skills = ["Mern Stack Developer", "Flutter Developer"]
+function calculation() {
+    var month = new Date();
+    var currentMonth = month.getMonth()
+    var price = festival.price;
 
-console.log(myProfile.skills[1])
-console.log(myProfile);
+    for (var i = 0; i < festival.discountMonths.length; i++) {
+        if (festival.discountMonths[i] === currentMonth) {
+            console.log(price * 9);
+            break;
+        }
+        return console.log(price * 10);
+    }
+}
+calculation()
