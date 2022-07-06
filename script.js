@@ -787,21 +787,81 @@ function add() {
 
 // chap 74: Objects: Prototypes
 
-var studentData = {
-    getFullName: function () {
-        return `${this.firstName} ${this.lastName}`
-    },
+// Object.prototype.greeting = "Hello World" //used like this(student.greeting)
 
-    getAge: function () {
-        var age = new Date().getFullYear() - this.birthYear;
-        return age;
+// var myFunctions = {
+//     getFullName: function () {
+//         return `${this.firstName} ${this.lastName}`
+//     },
+
+//     getAge: function () {
+//         var age = new Date().getFullYear() - this.birthYear;
+//         return age;
+//     }
+// }
+// var student = {
+//     firstName: "Ghulam Qadir",
+//     lastName: "Sakaria",
+//     birthYear: 2005,
+// }
+
+// var teacher = {
+//     firstName: "Usama",
+//     lastName: "Younus",
+//     birthYear: 1995,
+// }
+
+// student.__proto__ = myFunctions;
+// teacher.__proto__ = myFunctions;
+
+// console.log(student.getAge())
+// console.log(teacher.getAge())
+
+
+
+
+//example 2 (with Constructor example)
+
+var customFunctions = {
+    add: function () {
+        return this.num1 + this.num2
+    },
+    multiply: function () {
+        return this.num1 * this.num2
+    },
+}
+function Numbers(num1, num2) {
+    this.num1 = num1
+    this.num2 = num2
+}
+
+Numbers.prototype = customFunctions
+
+var calc1 = new Numbers(3, 5)
+
+console.log(calc1.multiply())
+
+
+
+// example 3 (with Constructor)
+function Festival(name, price, discountMonths) {
+    this.name = name,
+        this.price = price,
+        this.discountMonths = discountMonths
+}
+
+Festival.prototype.calculation = function (dicountPercent) {
+    var month = new Date();
+    var currentMonth = month.getMonth()
+
+    for (var i = 0; i < this.discountMonths.length; i++) {
+        if (this.discountMonths[i] === currentMonth) {
+            return `After 40% discount: ${this.price * dicountPercent}`;
+            // break;
+        }
+        return this.price * 20
     }
 }
-var student = {
-    firstName: "Ghulam Qadir",
-    lastName: "Sakaria",
-    birthYear: 2005
-}
 
-student.__proto__ = studentData;
-console.log(student.getAge())
+var eidFestival = new Festival("Eid-ul-Fitr", 20, [6, 7])
+console.log(eidFestival.calculation(12))
