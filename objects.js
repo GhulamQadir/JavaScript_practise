@@ -118,24 +118,25 @@
 
 //example 2 (with Constructor example)
 
-var customFunctions = {
-    add: function () {
-        return this.num1 + this.num2
-    },
-    multiply: function () {
-        return this.num1 * this.num2
-    },
-}
-function Numbers(num1, num2) {
-    this.num1 = num1
-    this.num2 = num2
-}
+// var customFunctions = {
+//     add: function () {
+//         return this.num1 + this.num2
+//     },
+//     multiply: function () {
+//         return this.num1 * this.num2
+//     },
+// }
+// function Numbers(num1, num2) {
+//     this.num1 = num1
+//     this.num2 = num2
+// }
 
-Numbers.prototype = customFunctions
+// Numbers.prototype = customFunctions
 
-var calc1 = new Numbers(3, 5)
+// var calc1 = new Numbers(3, 5)
 
-console.log(calc1.multiply())
+// console.log(`After addition: ${calc1.add()}`)
+// console.log(`After mulitiplication: ${calc1.multiply()}`)
 
 
 
@@ -161,3 +162,42 @@ Festival.prototype.calculation = function (dicountPercent) {
 
 var eidFestival = new Festival("Eid-ul-Fitr", 20, [6, 7])
 console.log(eidFestival.calculation(12))
+
+
+
+
+
+// chap 75: Objects: Checking for properties and methods
+// var myProfile = {
+//     name: "Ghulam Qadir",
+//     email: "ghulamqadirsakaria25@gmail.com",
+//     age: 17,
+//     education: "Matriculate"
+// }
+// console.log("__proto__" in myProfile); //checking for property if it exists in the object or not(it also checks the proototypes properties)
+
+// console.log(myProfile.hasOwnProperty("email"))
+
+
+
+
+
+//getting all the properties and values of obj
+
+var myProfile = {
+    name: "Ghulam Qadir",
+    email: "ghulamqadirsakaria25@gmail.com",
+    age: 17,
+    education: "Matriculate"
+}
+
+for (var property in myProfile) { //properties
+    console.log(property)
+}
+
+
+for (var property in myProfile) { //properties and values
+    console.log(`${property}: ${myProfile[property]}`)
+}
+
+
