@@ -50,10 +50,52 @@ function login() {
 
 
 // chap 81: Browser control: Testing for popup blockers
-function checkForPopupBlocker() {
-    var win = window.open('https://github.com')
-    if (win === null) {
-        alert("Please enable popup locker")
-        win.close()
+// function checkForPopupBlocker() {
+//     var win = window.open('https://github.com')
+//     if (win === null) {
+//         alert("Please enable popup locker")
+//         win.close()
+//     }
+// }
+
+
+
+
+
+// chap 82: Form validation: text fields 
+function signUp() {
+    var firstName = document.getElementById('firstName')
+    var lastName = document.getElementById('lastName')
+    var email = document.getElementById('email')
+    var password = document.getElementById('password')
+
+    if (firstName.value.length === 0) {
+        alert("Please enter your first name")
+        firstName.className = 'error'
+        firstName.focus();
     }
+    else if (lastName.value.length === 0) {
+        alert("Please enter your last name")
+        lastName.className = 'error'
+        lastName.focus();
+    }
+    else if (email.value.length === 0) {
+        alert("Please enter your email")
+        email.className = 'error'
+        email.focus();
+    }
+    else if (password.value.length === 0) {
+        alert("Please enter your password")
+        password.className = 'error'
+        password.focus();
+    }
+    else {
+        firstName.value = ""
+        lastName.value = ""
+        email.value = ""
+        password.value = ""
+        alert("Your account created successfully")
+        window.location.replace('home.html')
+    }
+
 }
