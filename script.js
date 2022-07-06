@@ -749,61 +749,59 @@ function add() {
 
 // by using this method(it get the value of the standing object)
 //30 percent discount example
-var festival = {
-    name: "Eid",
-    price: 20,
-    discountMonths: [6, 7],
-    calculation: function (dicountPercent) {
+// var festival = {
+//     name: "Eid",
+//     price: 20,
+//     discountMonths: [6, 7],
+//     calculation: function (dicountPercent) {
 
-        var month = new Date();
-        var currentMonth = month.getMonth()
+//         var month = new Date();
+//         var currentMonth = month.getMonth()
 
-        for (var i = 0; i < this.discountMonths.length; i++) {
-            if (this.discountMonths[i] === currentMonth) {
-                console.log(`After 30% discount: ${this.price * dicountPercent}`);
-                break;
-            }
-            return this.price * 20
-        }
-    }
-}
-var getCalc = festival.calculation(15)
+//         for (var i = 0; i < this.discountMonths.length; i++) {
+//             if (this.discountMonths[i] === currentMonth) {
+//                 console.log(`After 30% discount: ${this.price * dicountPercent}`);
+//                 break;
+//             }
+//             return this.price * 20
+//         }
+//     }
+// }
+// var getCalc = festival.calculation(15)
 
 
 
 
 // chap 72: Objects: Constructors
-function BioData(name, email, age, skills) {
-    this.name = name,
-        this.email = email,
-        this.age = age,
-        this.skills = skills
-}
-var bio = new BioData("Ghulam Qadir", "ghulamqadirsakaria25@gmail.com", 17, ["Mern Stack developer", "Flutter developer"]);
-console.log(bio)
+// function BioData(name, email, age, skills) {
+//     this.name = name,
+//         this.email = email,
+//         this.age = age,
+//         this.skills = skills
+// }
+// var bio = new BioData("Ghulam Qadir", "ghulamqadirsakaria25@gmail.com", 17, ["Mern Stack developer", "Flutter developer"]);
+// console.log(bio)
 
 
 
 
 // chap 74: Objects: Prototypes
-function Festival(name, price, discountMonths) {
-    this.name = name,
-        this.price = price,
-        this.discountMonths = discountMonths
-}
 
-Festival.prototype.calculation = function (dicountPercent) {
-    var month = new Date();
-    var currentMonth = month.getMonth()
+var studentData = {
+    getFullName: function () {
+        return `${this.firstName} ${this.lastName}`
+    },
 
-    for (var i = 0; i < this.discountMonths.length; i++) {
-        if (this.discountMonths[i] === currentMonth) {
-            console.log(`After 30% discount: ${this.price * dicountPercent}`);
-            break;
-        }
-        return this.price * 20
+    getAge: function () {
+        var age = new Date().getFullYear() - this.birthYear;
+        return age;
     }
 }
+var student = {
+    firstName: "Ghulam Qadir",
+    lastName: "Sakaria",
+    birthYear: 2005
+}
 
-var eidFestival = new Festival("Eid-ul-Fitr", 20, [6, 7])
-console.log(eidFestival)
+student.__proto__ = studentData;
+console.log(student.getAge())
