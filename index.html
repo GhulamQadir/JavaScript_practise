@@ -254,7 +254,7 @@
 
 
     <!-- chap 82: Form validation: text fields -->
-    <input id="firstName" type="text" placeholder="First Name" />
+    <!-- <input id="firstName" type="text" placeholder="First Name" />
     <br>
     <input id="lastName" type="text" placeholder="Last Name" />
     <br>
@@ -263,8 +263,32 @@
     <input id="password" type="password" placeholder="Password" />
     <br>
     <button onclick="signUp()">Sign Up</button>
-    <br><br><br>
+    <br><br><br> -->
 
+
+
+
+    <!-- chap 83: Form validation: drop-downs -->
+    <select id="states">
+        <option value="" selected="selected">
+            SELECT A STATE</option>
+        <option value="Sindh">Sindh</option>
+        <option value="Punjab">Punjab</option>
+        <option value="Balochistan">Balochistan</option>
+        <option value="KPK">KPK</option>
+    </select>
+    <br>
+    <button onclick="submit()">Submit</button>
+
+
+
+    <!-- chap 84: Form validation: radio buttons -->
+    <h2>Selete your gender:</h2>
+    <input type="radio" name="radioBtn" value="Male">Male
+    <br>
+    <input type="radio" name="radioBtn" value="Female">Female
+    <br>
+    <button onclick="selectGender()">Submit</button>
 
 </body>
 <script src="chap 76-80.js"></script>

@@ -63,39 +63,72 @@ function login() {
 
 
 // chap 82: Form validation: text fields 
-function signUp() {
-    var firstName = document.getElementById('firstName')
-    var lastName = document.getElementById('lastName')
-    var email = document.getElementById('email')
-    var password = document.getElementById('password')
+// function signUp() {
+//     var firstName = document.getElementById('firstName')
+//     var lastName = document.getElementById('lastName')
+//     var email = document.getElementById('email')
+//     var password = document.getElementById('password')
 
-    if (firstName.value.length === 0) {
-        alert("Please enter your first name")
-        firstName.className = 'error'
-        firstName.focus();
-    }
-    else if (lastName.value.length === 0) {
-        alert("Please enter your last name")
-        lastName.className = 'error'
-        lastName.focus();
-    }
-    else if (email.value.length === 0) {
-        alert("Please enter your email")
-        email.className = 'error'
-        email.focus();
-    }
-    else if (password.value.length === 0) {
-        alert("Please enter your password")
-        password.className = 'error'
-        password.focus();
+//     if (firstName.value.length === 0) {
+//         alert("Please enter your first name")
+//         firstName.className = 'error'
+//         firstName.focus();
+//     }
+//     else if (lastName.value.length === 0) {
+//         alert("Please enter your last name")
+//         lastName.className = 'error'
+//         lastName.focus();
+//     }
+//     else if (email.value.length === 0) {
+//         alert("Please enter your email")
+//         email.className = 'error'
+//         email.focus();
+//     }
+//     else if (password.value.length === 0) {
+//         alert("Please enter your password")
+//         password.className = 'error'
+//         password.focus();
+//     }
+//     else {
+//         firstName.value = ""
+//         lastName.value = ""
+//         email.value = ""
+//         password.value = ""
+//         alert("Your account created successfully")
+//         window.location.replace('home.html')
+//     }
+
+// }
+
+
+
+
+
+// chap 83: Form validation: drop-downs
+function submit() {
+    var selectState = document.getElementById('states')
+    if (selectState.selectedIndex === 0) {
+        alert("Please select your state")
+        return false;
     }
     else {
-        firstName.value = ""
-        lastName.value = ""
-        email.value = ""
-        password.value = ""
-        alert("Your account created successfully")
-        window.location.replace('home.html')
+        console.log(selectState.options[selectState.selectedIndex].value)
+        selectState.selectedIndex = null
     }
-
 }
+
+
+
+// chap 84: Form validation: radio buttons
+function selectGender() {
+    var gender = document.getElementsByName('radioBtn')
+    for (var i = 0; i < gender.length; i++) {
+        if (gender[i].checked) {
+            console.log(gender[i].value)
+            gender[i].checked = false
+            return true;
+        }
+    }
+    alert("Please select your gender")
+    return false
+}   
