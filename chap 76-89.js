@@ -105,33 +105,33 @@ function login() {
 
 
 // chap 83: Form validation: drop-downs
-function submit() {
-    var selectState = document.getElementById('states')
-    if (selectState.selectedIndex === 0) {
-        alert("Please select your state")
-        return false;
-    }
-    else {
-        console.log(selectState.options[selectState.selectedIndex].value)
-        selectState.selectedIndex = null
-    }
-}
+// function submit() {
+//     var selectState = document.getElementById('states')
+//     if (selectState.selectedIndex === 0) {
+//         alert("Please select your state")
+//         return false;
+//     }
+//     else {
+//         console.log(selectState.options[selectState.selectedIndex].value)
+//         selectState.selectedIndex = null
+//     }
+// }
 
 
 
 // chap 84: Form validation: radio buttons
-function selectGender() {
-    var gender = document.getElementsByName('radioBtn')
-    for (var i = 0; i < gender.length; i++) {
-        if (gender[i].checked) {
-            console.log(gender[i].value)
-            gender[i].checked = false
-            return true;
-        }
-    }
-    alert("Please select your gender")
-    return false
-}
+// function selectGender() {
+//     var gender = document.getElementsByName('radioBtn')
+//     for (var i = 0; i < gender.length; i++) {
+//         if (gender[i].checked) {
+//             console.log(gender[i].value)
+//             gender[i].checked = false
+//             return true;
+//         }
+//     }
+//     alert("Please select your gender")
+//     return false
+// }
 
 
 
@@ -153,3 +153,55 @@ function validateZipCode() {
         }
     }
 }
+
+
+
+
+// chap 86: Form validation: email
+function validateEmail() {
+    var email = document.getElementById('email').value
+    var regex = /^[\w\-\.\+]+\@[a-zA-Z0-9\. \-]+\.[a-zA-z0-9]{2,4}$/;
+
+    if (!(email.match(regex))) {
+        alert("Please enter your valid email address")
+        return false;
+    }
+    else {
+        alert("Validate")
+        return true;
+    }
+}
+
+
+
+
+// chap 888 and 89: Exceptions: try and catch and throw
+function validatePassword() {
+    try {
+        var password = document.getElementById("password").value;
+        if (password.length < 6) {
+            throw "Please enter at least 6 characters.";
+        }
+        if (password.indexOf(" ") !== -1) {
+            throw "No spaces in the password";
+        }
+        var numberSomewhere = false;
+        for (var i = 0; i < password.length; i++) {
+            if (isNaN(password[i, i + 1]) === false) {
+                numberSomewhere = true;
+                break;
+            }
+        }
+        if (numberSomewhere === false) {
+            throw "Include at least 1 number.";
+        }
+        else {
+            alert("Password is validate")
+        }
+    }
+
+    catch (err) {
+        alert(err);
+    }
+}
+
